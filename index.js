@@ -17,8 +17,8 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 /*
-The variable 'internal' is declared inside myFunction. Any child functions of myFunction have access to the variable 'internal'. Because nestedFunction is a child of myFunction, it has access to the variable 'internal'. 
 
+The variable 'internal' is declared inside myFunction. Any child functions of myFunction have access to the variable 'internal'. Because nestedFunction is a child of myFunction, it has access to the variable 'internal'. 
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
@@ -37,7 +37,7 @@ function summation(number) {
   }
   return counter;
 }
- 
+ console.log('Task 2',summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -224,14 +224,35 @@ const cuboid = new CuboidMaker({
 
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
-class CuboidMakerTwo{
 
+class CuboidMakerTwo{  
+  constructor(attributes){
+  this.length = attributes.length;
+  this.width = attributes.width;
+  this.height = attributes.height;
+}
+volume(){
+  return this.length*this.height*this.width;
+}
+
+surfaceArea(){
+  return 2*((this.length*this.width) + (this.length*this.height) + (this.width*this.height));
+}
 }
 
 
+const cuboidTwo = new CuboidMakerTwo({
+length: 4,
+width: 5,
+height: 5
+});
+
+
+
+
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume()); // 100
-// console.log(cuboidTwo.surfaceArea()); // 130
+ console.log(cuboidTwo.volume()); // 100
+ console.log(cuboidTwo.surfaceArea()); // 130
 
 
 

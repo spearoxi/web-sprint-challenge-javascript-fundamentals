@@ -28,10 +28,13 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
+        .map and .forEach are similar in that they both iterate through an array. However, .map always returns a new array, while .forEach requires you to create a new array and then push to that new array.
 
 2. Explain the difference between a callback and a higher order function.
+        A callback function is a function that is used as an argument in other functions and can be invoked inside of that other function. A higher order function takes other functions as arguments and can return functions as an output.
 
 3. Can you explain what a closure is and how you used it in the counter function? 
+        
 
 4. Describe the four principles of the 'this' keyword.
 

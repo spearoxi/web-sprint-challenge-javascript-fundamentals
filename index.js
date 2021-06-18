@@ -69,7 +69,7 @@ const zooAnimals = [
     });
       return displayNames;
   }
-  console.log(animalNames(zooAnimals));
+  console.log('Task2 Request1: ',animalNames(zooAnimals));
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -77,9 +77,14 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+      const lowAnimals = array.map(function(item){
+          return item.animal_name.toLowerCase();
+      });
+      return lowAnimals;
   }
+
+  console.log('Task2 Request2:', lowerCaseNames(zooAnimals));
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -87,9 +92,16 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array){
+    const lowPop = array.filter(function(item){
+      if(item.population < 5){
+        return item;
+      }
+    });
+    return lowPop;
   }
+/* QUESTION, Does this want me to push the full animal object or just the animals names?*/
+  console.log('Task2 Request3:',lowPopulationAnimals(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
@@ -98,9 +110,14 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
+  function USApop(array){
+    const totalPop = array.reduce(function(acc, item){
+      return acc + item.population;
+    },0);
+    return totalPop;
   }
+
+  console.log('Task2 Request4:', USApop(zooAnimals));
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
